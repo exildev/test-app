@@ -1,31 +1,56 @@
-<header>
-    <nav>
-        <div class="nav-wrapper">
-            <h1 class="title" style="display:none;">
-                <a href="#!" class="brand-logo">
-                    {{title}}
+<aside class="mdc-persistent-drawer">
+    <nav class="mdc-persistent-drawer__drawer">
+        <div class="mdc-toolbar mdc-elevation--z4">
+            <div class="mdc-toolbar__row">
+
+            </div>
+        </div>
+        <!-- <div class="mdc-persistent-drawer__toolbar-spacer"></div> -->
+        <div class="mdc-list-group">
+            <nav class="mdc-list">
+                <a class="mdc-list-item mdc-persistent-drawer--selected" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
                 </a>
-            </h1>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
+                </a>
+            </nav>
+
+            <hr class="mdc-list-divider">
+
+            <nav class="mdc-list">
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
+                </a>
+                <a class="mdc-list-item" href="#">
+                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
+                </a>
+            </nav>
         </div>
     </nav>
-    <div class="container">
-        <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only">
-            <i class="material-icons">menu</i>
-        </a>
-    </div>
-    <ul class="side-nav fixed" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-    </ul>
-</header>
-<main>
-    hola mundo
-</main>
-<footer>
+</aside>
+<div class="demo-content">
+    <header class="mdc-toolbar mdc-elevation--z4">
+        <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                <button class="demo-menu material-icons">menu</button>
+                <span class="mdc-toolbar__title catalog-title">Persistent Drawer</span>
+            </section>
+        </div>
+    </header>
 
-</footer>
-
-
-<button (click)="mostrarTitulo()">Mostrar titulo</button>
+    <main class="demo-main">
+        <h1>{{title}}</h1>
+        <h1 class="mdc-typography--display1">Persistent Drawer</h1>
+        <p class="mdc-typography--body1">Click the menu icon above to open and close the drawer.</p>
+    </main>
+</div>
