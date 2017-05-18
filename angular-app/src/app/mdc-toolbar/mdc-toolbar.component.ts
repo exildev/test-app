@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-mdc-toolbar',
-  templateUrl: './mdc-toolbar.component.html',
-  styleUrls: ['./mdc-toolbar.component.css']
+    selector: 'app-mdctoolbar',
+    templateUrl: './mdc-toolbar.component.html',
+    styleUrls: ['./mdc-toolbar.component.css']
 })
-export class MdcToolbarComponent implements OnInit {
+export class MdcToolbarComponent {
 
-  constructor() { }
+    @Input() title: string;
+    @Input() subtitle: string;
+    @Input() menuIcon: string;
 
-  ngOnInit() {
-  }
+    constructor() {
+        this.title = 'Grit App';
+        this.subtitle = '';
+     }
 
 }

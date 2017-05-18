@@ -1,56 +1,10 @@
-<aside class="mdc-persistent-drawer">
-    <nav class="mdc-persistent-drawer__drawer">
-        <div class="mdc-toolbar mdc-elevation--z4">
-            <div class="mdc-toolbar__row">
-
-            </div>
-        </div>
-        <!-- <div class="mdc-persistent-drawer__toolbar-spacer"></div> -->
-        <div class="mdc-list-group">
-            <nav class="mdc-list">
-                <a class="mdc-list-item mdc-persistent-drawer--selected" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">inbox</i>Inbox
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">star</i>Star
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">send</i>Sent Mail
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">drafts</i>Drafts
-                </a>
-            </nav>
-
-            <hr class="mdc-list-divider">
-
-            <nav class="mdc-list">
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">email</i>All Mail
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">delete</i>Trash
-                </a>
-                <a class="mdc-list-item" href="#">
-                    <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">report</i>Spam
-                </a>
-            </nav>
-        </div>
-    </nav>
-</aside>
-<div class="demo-content">
-    <header class="mdc-toolbar mdc-elevation--z4">
-        <div class="mdc-toolbar__row">
-            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                <button class="demo-menu material-icons">menu</button>
-                <span class="mdc-toolbar__title catalog-title">Persistent Drawer</span>
-            </section>
-        </div>
-    </header>
-
-    <main class="demo-main">
-        <h1>{{title}}</h1>
-        <h1 class="mdc-typography--display1">Persistent Drawer</h1>
-        <p class="mdc-typography--body1">Click the menu icon above to open and close the drawer.</p>
-    </main>
-</div>
+}<app-navbar>
+    <div class="mdc-list-group"></div>
+</app-navbar>
+<gr-content>
+    <app-mdctoolbar menuIcon="menu" [title]="title" subtitle="Ordenes de Trabajo"></app-mdctoolbar>
+    <app-main>
+        hola mundo!
+        <app-gr-proyect-list></app-gr-proyect-list>
+    </app-main>
+</gr-content>

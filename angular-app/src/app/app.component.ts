@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProyectoService } from './services/proyecto.service';
 
 declare var jQuery: any;
 declare var $: any;
@@ -7,17 +8,18 @@ declare var mdc: any;
 @Component({
     selector: 'app-grit',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.css'],
+    providers: [ ProyectoService ]
 })
 export class AppComponent implements OnInit {
 
-    title = 'Grit works!';
+    title = 'Grit';
 
     public ngOnInit() {
-        console.log('app-grit inico');
+        $.getScript('../assets/js/material-components-web.min.js');
+
         mdc.autoInit();
         this.drawerInit();
-
     }
 
     public mostrarTitulo() {
