@@ -15,11 +15,11 @@ export interface Orden {
 }
 
 export interface Actividad {
+    id: number;
     completado: boolean;
     dias_estimados: number;
     fecha_completado: Date;
     formato_id: number;
-    id: number;
     nombre: string;
     orden_id: number;
     poscicion: number;
@@ -27,5 +27,9 @@ export interface Actividad {
 }
 
 export interface Material {
-    pk: number;
+    id: number;
+    material_id: number;
+    orden_id: number;
+    precio: string;
+    tipo_id: number;
 }

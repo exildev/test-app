@@ -1,6 +1,7 @@
 :host{
     display: block;
-    padding-left: 16px;
+    padding: 16px;
     height: 100%;
     overflow: auto;
+    background: #eee;
 }

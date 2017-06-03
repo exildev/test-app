@@ -9,7 +9,7 @@ declare var mdc: any;
     selector: 'app-grit',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
-    providers: [ ProyectoService ]
+    providers: [ProyectoService]
 })
 export class AppComponent implements OnInit {
 
@@ -19,28 +19,28 @@ export class AppComponent implements OnInit {
         $.getScript('../assets/js/material-components-web.min.js');
 
         mdc.autoInit();
-        this.drawerInit();
+        // this.drawerInit();
     }
 
     public mostrarTitulo() {
-        console.log( 'click' );
+        console.log('click');
     }
 
-    private drawerInit() {
-        const drawerel = document.querySelector('.mdc-persistent-drawer');
-        const MDCPersistentDrawer = mdc.drawer.MDCPersistentDrawer;
-        const drawer = new MDCPersistentDrawer(drawerel);
-
-        document.querySelector('.demo-menu').addEventListener('click', function() {
-            drawer.open = !drawer.open;
-        });
-
-        drawerel.addEventListener('MDCPersistentDrawer:open', function() {
-            console.log('Received MDCPersistentDrawer:open');
-        });
-
-        drawerel.addEventListener('MDCPersistentDrawer:close', function() {
-            console.log('Received MDCPersistentDrawer:close');
-        });
-    }
+    // private drawerInit() {
+    //     const drawerel = document.querySelector('.mdc-persistent-drawer');
+    //     const MDCPersistentDrawer = mdc.drawer.MDCPersistentDrawer;
+    //     const drawer = new MDCPersistentDrawer(drawerel);
+    //
+    //     document.querySelector('.demo-menu').addEventListener('click', function() {
+    //         drawer.open = !drawer.open;
+    //     });
+    //
+    //     drawerel.addEventListener('MDCPersistentDrawer:open', function() {
+    //         console.log('Received MDCPersistentDrawer:open');
+    //     });
+    //
+    //     drawerel.addEventListener('MDCPersistentDrawer:close', function() {
+    //         console.log('Received MDCPersistentDrawer:close');
+    //     });
+    // }
 }

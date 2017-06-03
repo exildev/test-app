@@ -1,3 +1,44 @@
-<p>
-  gr-proyect-list works!
-</p>
+<div class="mdc-card">
+    <section class="mdc-card__primary">
+        <h1 class="mdc-card__title mdc-card__title--large">Title goes here</h1>
+        <h3 class="mdc-card__subtitle">Subtitle here</h3>
+    </section>
+    <br>
+    <section class="mdc-card__supporting-text">
+        <ul class="mdc-list mdc-list--two-line msgs-list">
+            <li class="mdc-list-item">
+                <span class="mdc-list-item__text">
+      Ali Connors
+      <span class="mdc-list-item__text_secondary">Lunch this afternoon? I was...</span>
+                </span>
+
+                <span class="mdc-list-item__end-detail">
+      <time datetime="2014-01-28T04:36:00.000Z">4:36pm</time>
+      <i class="material-icons" arial-label="Unread message">chat_bubble</i>
+    </span>
+            </li>
+            <!-- ... -->
+        </ul>
+    </section>
+</div>
+<div class="example-container">
+    <h3>Normal Buttons</h3>
+    <div class="button-row">
+        <button md-button>Flat button</button>
+        <button md-raised-button>Raised button</button>
+        <button md-fab><md-icon>check</md-icon></button>
+        <button md-mini-fab><md-icon>check</md-icon></button>
+    </div>
+
+    <h3>Link Buttons</h3>
+    <div class="example-button-row">
+        <a md-button routerLink=".">Flat button</a>
+        <a md-raised-button routerLink=".">Raised button</a>
+        <a md-fab routerLink=".">
+            <md-icon>check</md-icon>
+        </a>
+        <a md-mini-fab routerLink=".">
+            <md-icon>check</md-icon>
+        </a>
+    </div>
+</div>

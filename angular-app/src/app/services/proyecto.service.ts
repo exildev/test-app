@@ -8,7 +8,7 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class ProyectoService {
 
-    private _proyectoUrl = 'http://104.236.33.228:8777/ws/proyecto/list/';
+    private _proyectoUrl = 'http://192.168.1.52:8000/ws/proyecto/list/';
 
     constructor(private _jsonp: Http) { }
 
@@ -19,10 +19,19 @@ export class ProyectoService {
     }
 
     private onResponse(res: Response) {
-        let body: any;
-        body = res.json();
-        console.log(body);
-        return body.data || {};
+        const body: any = res.json().object_list;
+        for (const key in body) {
+            if (body[key]) {
+                body[key].ordenes = body[key].ordenes.object_list;
+                for (const key2 in body[key].ordenes) {
+                    if (body[key].ordenes[key2]) {
+                        body[key].ordenes[key2].actividades = body[key].ordenes[key2].actividades.object_list;
+                        body[key].ordenes[key2].materiales = body[key].ordenes[key2].materiales.object_list;
+                    }
+                };
+            }
+        }
+        return body || {};
     }
 
     private onError(error: Response | any) {
